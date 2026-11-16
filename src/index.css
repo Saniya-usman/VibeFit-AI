@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* Hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;   /* IE and Edge */
+  scrollbar-width: none;      /* Firefox */
+}
+
+
+/* src/index.css or src/tailwind.css */
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slideInUp {
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1.2); }
+}
+
+.animate-wave {
+  animation: wave 1s infinite ease-in-out;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-linear-to-br from-[#5297b0] to-[#1d455b] text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply bg-white/80 backdrop-blur-sm text-cyan-700 border-2 border-purple-200 px-6 py-3 rounded-lg font-semibold hover:border-purple-400 hover:bg-purple-50 transition-all duration-300;
+}
+
+
+
+  
